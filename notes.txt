@@ -1,0 +1,8 @@
+nprj l <language> i <ide> n <project name>
+- navigate to directory specified as part of PROJNAME (if any), else default location
+- create new folder of name (if specified), else generic name
+- git init
+- connect to github
+- if IDE is specified, create new project in that ide if possible, else use default (VSCode)
+- (?) maybe add option to set defaults
+- (?) search for other ide's if default or configured isn't found

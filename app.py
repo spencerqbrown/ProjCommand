@@ -1,7 +1,6 @@
 # imports
 import os
 import sys
-import functions
 
 # constants
 default_project_directory = "/Documents/Projects"
@@ -22,7 +21,7 @@ try:
     ide = ""
     if (len(config_text)) == config_length:
         print("TEMP")
-        
+
 except IOError:
     project_directory = default_project_directory
     project_name = default_project_name

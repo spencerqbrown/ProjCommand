@@ -6,3 +6,4 @@ nprj l <language> i <ide> n <project name>
 - if IDE is specified, create new project in that ide if possible, else use default (VSCode)
 - (?) maybe add option to set defaults
 - (?) search for other ide's if default or configured isn't found
+

@@ -20,10 +20,6 @@ def open_project(project_name, ide):
     # TODO
     return None
 
-def check_language(language):
-    # TODO
-    return True
-
 def check_ide(ide):
     # TODO
     return True
@@ -35,7 +31,15 @@ ide = None
 
 if __name__ == "__main__":
 
-    first_argument = sys.argv[1]
+    nargs = len(sys.argv)
+    if nargs > 1:
+        switch (sys.argv[1]):
+            case ('i'):
+                
+            case ('n'):
+    else:
+        # TODO use default ide, name, directory
+    
     
 
 

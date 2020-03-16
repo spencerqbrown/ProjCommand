@@ -6,7 +6,7 @@ def git_local(name):
     subprocess.call(["cd", "cd " + name]) # go to directory
     subprocess.call(["git init", "git commit -m 'first commit'"])
     # TODO load username, password properly
-    github(username, password, name) # may need to adjust name variable
+    git_web(username, password, name) # may need to adjust name variable
     url = "github.com" #placeholder
     subprocess.call(["git clone " + url, "git push"])
 

@@ -1,6 +1,7 @@
 import sys
+from .app import application
 
-def check_for_directory(directory):
+def check_name(directory):
     # TODO
     return None
 
@@ -31,20 +32,20 @@ ide = None
 
 if __name__ == "__main__":
 
-    nargs = len(sys.argv)
-    if nargs > 1:
-        switch (sys.argv[1]):
-            case ('i'):
-                
-            case ('n'):
+    args = sys.argv
+    nargs = len(args)
+    if (nargs == 5): # ide and name are present
+        if ((args[1] != 'i') or (args[3] != 'n')): # incorrect commands for ide or name
+            raise ValueError
+        if ((not check_ide(args[2])) or (not check_name(args[4]))): # invalid ide or name, maybe separate later
+            raise ValueError
+        app(args[2], args[4])
+    elif (nargs == 3): # either only ide or only name present
+        if ((args[1] == 'i') and (check_ide(agrs[2]))): # ide is present and valid
+            app(args[2], None)
+        elif ((args[1] == 'n') and (check_name(args[2]))): # name is present and valid
+            app(None, args[2])
+        else:
+            raise ValueError
     else:
-        # TODO use default ide, name, directory
-    
-    
-
-
-    # after checks
-    navigate(project_name)
-    setup_directory(project_name, ide)
-    setup_repo(project_name)
-    open_project(project_name, ide)
+        app(None, None)

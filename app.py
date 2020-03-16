@@ -1,11 +1,12 @@
 # imports
 import os
 import sys
+from git_operations import git_local
 
 # constants
 default_project_directory = "/Documents/Projects"
 dpd_config_line = 1
-default_project_name = "New Project"
+default_project_name = "New_Project"
 dpn_config_line = 3
 default_ide = "code" # VSCode
 di_config_line = 5
@@ -32,3 +33,16 @@ except IOError:
 
 # change directory
 os.system("")
+
+def app(ide, name):
+    if (ide is None):
+        ide = default_ide
+    if (name is None):
+        name = default_project_name
+    if ('/' in name):
+        dirs = name.split('/')
+        for d in dirs:
+            # TODO check if d exists, else mkdir
+    # TODO enter target directory and make project
+    git_local(name)
+    # TODO open project

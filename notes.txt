@@ -1,4 +1,4 @@
-nprj l <language> i <ide> n <project name>
+nprj i <ide> n <project name>
 - navigate to directory specified as part of PROJNAME (if any), else default location
 - create new folder of name (if specified), else generic name
 - git init
